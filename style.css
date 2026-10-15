@@ -2,18 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
-    --background: #F4F7FB;
-    --surface: #FFFFFF;
-    --text: #303B4A;
-    --muted: #778394;
+  --background: #F4F7FB;
+  --surface: #FFFFFF;
+  --text: #303B4A;
+  --muted: #778394;
+  --blue: #B8D4EE;
+  --blue-dark: #496A91;
+  --blue-light: #E8F0F8;
+  --rose: #A8C5E2;
+  --border: #DFE7F0;
 
-    --blue: #A8C5E2;
-    --blue-light: #E8F0F8;
-    --rose: #A8C5E2;
-    --border: #DFE7F0;
-
-    --serif: 'Playfair Display', Georgia, serif;
-    --sans: 'DM Sans', 'Segoe UI', sans-serif;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', 'Segoe UI', sans-serif;
 }
 
 * {
@@ -41,15 +41,15 @@ header {
   text-align: center;
   padding: 6.5rem 1.5rem 5.5rem;
   background: var(--blue);
-  color: #303B4A;
-  border-bottom: 4px solid var(--rose);
+  color: var(--text);
+  border-bottom: 4px solid var(--blue-dark);
 }
 
 header::before,
 header::after {
   content: "";
   position: absolute;
-  border: 1px solid rgba(255, 254, 250, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -83,7 +83,7 @@ header h1 {
 }
 
 header p {
-  color: #dce5db;
+  color: #405A78;
   font-size: 0.9rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -110,14 +110,14 @@ section {
   border: 1px solid var(--border);
   border-radius: 5px;
   padding: clamp(1.5rem, 5vw, 3rem);
-  box-shadow: 0 12px 35px rgba(48, 55, 47, 0.035);
+  box-shadow: 0 12px 35px rgba(48, 55, 74, 0.035);
 }
 
 h2 {
   position: relative;
   display: block;
   width: fit-content;
-  color: var(--green);
+  color: var(--blue-dark);
   font-family: var(--serif);
   font-size: 2rem;
   font-weight: 500;
@@ -138,13 +138,13 @@ h2::after {
 
 #about p {
   margin-bottom: 1.35rem;
-  color: #50564e;
+  color: #505B6B;
   font-size: 0.97rem;
   line-height: 1.95;
 }
 
 #about p:first-of-type {
-  color: var(--green);
+  color: var(--blue-dark);
   font-family: var(--serif);
   font-size: 1.3rem;
   line-height: 1.7;
@@ -167,21 +167,21 @@ h2::after {
 }
 
 a {
-  color: var(--green);
+  color: var(--blue-dark);
   text-decoration: none;
   font-weight: 600;
-  border-bottom: 1px solid #b7c5b5;
+  border-bottom: 1px solid var(--rose);
   padding-bottom: 2px;
   transition: color 0.25s ease, border-color 0.25s ease;
 }
 
 a:hover {
-  color: #a66d70;
-  border-color: var(--rose);
+  color: #7D9FC4;
+  border-color: var(--blue-dark);
 }
 
 a:focus-visible {
-  outline: 2px solid var(--rose);
+  outline: 2px solid var(--blue-dark);
   outline-offset: 4px;
 }
 
@@ -194,12 +194,10 @@ footer {
   letter-spacing: 0.025em;
 }
 
-
 ::selection {
-  background: #dce6da;
-  color: var(--green);
+  background: #D7E7F7;
+  color: var(--blue-dark);
 }
-
 
 @media (max-width: 600px) {
   header {
@@ -242,7 +240,6 @@ footer {
     font-size: 1.15rem;
   }
 }
-
 
 @media (prefers-reduced-motion: reduce) {
   html {
