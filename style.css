@@ -2,18 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
-  --background: #F4F7FB;
-  --surface: #FFFFFF;
-  --text: #303B4A;
-  --muted: #778394;
-  --blue: #B8D4EE;
-  --blue-dark: #496A91;
-  --blue-light: #E8F0F8;
-  --rose: #A8C5E2;
-  --border: #DFE7F0;
+    --background: #F4F7FB;
+    --surface: #FFFFFF;
+    --text: #303B4A;
+    --muted: #778394;
 
-  --serif: 'Playfair Display', Georgia, serif;
-  --sans: 'DM Sans', 'Segoe UI', sans-serif;
+    --green: #496A91;
+    --green-light: #E8F0F8;
+    --rose: #A8C5E2;
+    --border: #DFE7F0;
+
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', 'Segoe UI', sans-serif;
 }
 
 * {
@@ -40,16 +40,16 @@ header {
   overflow: hidden;
   text-align: center;
   padding: 6.5rem 1.5rem 5.5rem;
-  background: var(--blue);
-  color: var(--text);
-  border-bottom: 4px solid var(--blue-dark);
+  background: var(--green);
+  color: #fffefa;
+  border-bottom: 4px solid var(--rose);
 }
 
 header::before,
 header::after {
   content: "";
   position: absolute;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 254, 250, 0.14);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -83,7 +83,7 @@ header h1 {
 }
 
 header p {
-  color: #405A78;
+  color: #dce5db;
   font-size: 0.9rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -110,14 +110,14 @@ section {
   border: 1px solid var(--border);
   border-radius: 5px;
   padding: clamp(1.5rem, 5vw, 3rem);
-  box-shadow: 0 12px 35px rgba(48, 55, 74, 0.035);
+  box-shadow: 0 12px 35px rgba(48, 55, 47, 0.035);
 }
 
 h2 {
   position: relative;
   display: block;
   width: fit-content;
-  color: var(--blue-dark);
+  color: var(--green);
   font-family: var(--serif);
   font-size: 2rem;
   font-weight: 500;
@@ -138,13 +138,13 @@ h2::after {
 
 #about p {
   margin-bottom: 1.35rem;
-  color: #505B6B;
+  color: #50564e;
   font-size: 0.97rem;
   line-height: 1.95;
 }
 
 #about p:first-of-type {
-  color: var(--blue-dark);
+  color: var(--green);
   font-family: var(--serif);
   font-size: 1.3rem;
   line-height: 1.7;
@@ -167,21 +167,21 @@ h2::after {
 }
 
 a {
-  color: var(--blue-dark);
+  color: var(--green);
   text-decoration: none;
   font-weight: 600;
-  border-bottom: 1px solid var(--rose);
+  border-bottom: 1px solid #b7c5b5;
   padding-bottom: 2px;
   transition: color 0.25s ease, border-color 0.25s ease;
 }
 
 a:hover {
-  color: #7D9FC4;
-  border-color: var(--blue-dark);
+  color: #a66d70;
+  border-color: var(--rose);
 }
 
 a:focus-visible {
-  outline: 2px solid var(--blue-dark);
+  outline: 2px solid var(--rose);
   outline-offset: 4px;
 }
 
@@ -194,28 +194,25 @@ footer {
   letter-spacing: 0.025em;
 }
 
+
 ::selection {
-  background: #D7E7F7;
-  color: var(--blue-dark);
+  background: #dce6da;
+  color: var(--green);
 }
+
 
 @media (max-width: 600px) {
-header {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  padding: 6.5rem 1.5rem 5.5rem;
-  background: #B8D4EE !important;
-  color: #303B4A;
-  border-bottom: 4px solid #496A91;
-}
-
-header p {
-  color: #405A78;
-}
+  header {
+    padding: 4.5rem 1rem 3.8rem;
+  }
 
   header h1 {
     letter-spacing: -0.8px;
+  }
+
+  header p {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
   }
 
   .container {
@@ -245,6 +242,7 @@ header p {
     font-size: 1.15rem;
   }
 }
+
 
 @media (prefers-reduced-motion: reduce) {
   html {
