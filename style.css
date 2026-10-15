@@ -2,17 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
-  --background: #f8f7f2;
-  --surface: #fffefa;
-  --text: #30372f;
-  --muted: #72776e;
-  --green: #344d3c;
-  --green-light: #e8eee7;
-  --rose: #c28c8b;
-  --border: #e5e2d8;
+    --background: #F4F7FB;
+    --surface: #FFFFFF;
+    --text: #303B4A;
+    --muted: #778394;
 
-  --serif: 'Playfair Display', Georgia, serif;
-  --sans: 'DM Sans', 'Segoe UI', sans-serif;
+    --green: #496A91;
+    --green-light: #E8F0F8;
+    --rose: #A8C5E2;
+    --border: #DFE7F0;
+
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', 'Segoe UI', sans-serif;
 }
 
 * {
