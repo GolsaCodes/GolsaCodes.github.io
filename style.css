@@ -36,7 +36,6 @@ body {
   position: relative;
 }
 
-/* Animated background glow blobs */
 .blob {
   position: fixed;
   width: 550px;
