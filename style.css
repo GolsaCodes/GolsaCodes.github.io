@@ -200,17 +200,22 @@ footer {
 }
 
 @media (max-width: 600px) {
-  header {
-    padding: 4.5rem 1rem 3.8rem;
-  }
+header {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 6.5rem 1.5rem 5.5rem;
+  background: #B8D4EE !important;
+  color: #303B4A;
+  border-bottom: 4px solid #496A91;
+}
+
+header p {
+  color: #405A78;
+}
 
   header h1 {
     letter-spacing: -0.8px;
-  }
-
-  header p {
-    font-size: 0.75rem;
-    letter-spacing: 0.14em;
   }
 
   .container {
