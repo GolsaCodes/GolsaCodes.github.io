@@ -57,7 +57,7 @@ body {
 }
 
 .container {
-  width: min(100% - 2.5rem, 820px);
+  width: min(100% - 2.5rem, 1180);
   margin: 0 auto;
 }
 
@@ -320,10 +320,6 @@ footer {
   }
 }
 
-/* =========================================
-   TEACHING ASSISTANT SECTION
-========================================= */
-
 #teaching .section-intro,
 #presentations .section-intro {
   color: var(--muted);
@@ -440,10 +436,6 @@ footer {
   top: 0.25rem;
 }
 
-
-/* =========================================
-   PRESENTATIONS SECTION
-========================================= */
 
 .presentation-grid {
   display: grid;
@@ -564,9 +556,6 @@ footer {
 }
 
 
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
 
 @media (max-width: 640px) {
 
@@ -608,10 +597,6 @@ footer {
   }
 
 }
-
-/* =========================================
-   NAVIGATION BAR
-========================================= */
 
 .main-nav {
   position: sticky;
