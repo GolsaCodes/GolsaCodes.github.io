@@ -13,10 +13,34 @@
 <body>
 
   <header>
-    <div class="container">
-      <h1>Golsa Alavi</h1>
-      <p>NLP &nbsp;·&nbsp; AI</p>
+    
+
+<nav class="main-nav">
+  <div class="nav-inner">
+    <a href="#about" class="nav-logo">GA.</a>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#projects">Projects</a>
+      <a href="#presentations">Presentations</a>
+      <a href="#contact">Contact</a>
     </div>
+  </div>
+</nav>
+
+<aside class="side-decoration side-left" aria-hidden="true">
+  <span class="side-line"></span>
+  <span class="side-text">GOLSA ALAVI</span>
+  <span class="side-dot"></span>
+</aside>
+
+<aside class="side-decoration side-right" aria-hidden="true">
+  <span class="side-dot"></span>
+  <span class="side-text">NLP · AI · CS</span>
+  <span class="side-line"></span>
+</aside>
+
   </header>
 
   <main class="container">
@@ -150,6 +174,162 @@
       </div>
     </section>
 
+    
+<!-- Projects -->
+
+<section id="projects">
+
+  <h2>Projects</h2>
+
+  <p class="section-intro">
+    A collection of projects I've worked on,
+    exploring different areas of Artificial Intelligence,
+    Natural Language Processing, and Software Development.
+  </p>
+
+  <div class="projects-grid">
+
+    <!-- Project 1 -->
+
+    <article class="project-card">
+
+      <div class="project-top">
+        <span class="project-number">PROJECT 01</span>
+        <span class="project-season">Summer 2026</span>
+      </div>
+
+      <h3>Information Retrieval System</h3>
+
+      <p class="project-description">
+        Developed an LLM-based query expansion pipeline
+        using the Gemini API to generate relevant expansion
+        terms. Implemented and compared sparse and dense
+        retrieval pipelines using BM25, BGE embeddings,
+        and FAISS.
+      </p>
+
+      <p class="project-description">
+        Evaluated the impact of query expansion on document
+        retrieval using Recall@k, MRR@10, and nDCG@10.
+      </p>
+
+      <div class="project-tech">
+        <span>Python</span>
+        <span>Pandas</span>
+        <span>NumPy</span>
+        <span>spaCy</span>
+        <span>Gemini API</span>
+        <span>BGE Embeddings</span>
+        <span>FAISS</span>
+        <span>BM25</span>
+        <span>BEIR</span>
+      </div>
+
+      <div class="project-links">
+        <span class="project-status">
+          <span class="status-dot"></span>
+          Information Retrieval
+        </span>
+      </div>
+
+    </article>
+
+
+    <!-- Project 2 -->
+
+    <article class="project-card">
+
+      <div class="project-top">
+        <span class="project-number">PROJECT 02</span>
+        <span class="project-season">Summer 2026</span>
+      </div>
+
+      <h3>Movie Recommender System</h3>
+
+      <p class="project-description">
+        Implemented and compared Content-Based Recommendation
+        and Collaborative Filtering using Matrix Factorization
+        on two public movie datasets.
+      </p>
+
+      <p class="project-description">
+        Built end-to-end recommendation pipelines using
+        TF-IDF, Word2Vec, and Sentence-BERT (SBERT).
+        Tuned model hyperparameters and evaluated recommendation
+        quality using RMSE and MAE, achieving an MAE of 0.73.
+      </p>
+
+      <div class="project-tech">
+        <span>Python</span>
+        <span>Pandas</span>
+        <span>NumPy</span>
+        <span>NLTK</span>
+        <span>Scikit-learn</span>
+        <span>TF-IDF</span>
+        <span>Word2Vec</span>
+        <span>Sentence-BERT</span>
+      </div>
+
+      <div class="project-links">
+        <a
+          href="https://github.com/GolsaCodes/Movie-Recommender"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="github-link"
+        >
+          View on GitHub <span>↗</span>
+        </a>
+      </div>
+
+    </article>
+
+
+    <!-- Project 3 -->
+
+    <article class="project-card">
+
+      <div class="project-top">
+        <span class="project-number">PROJECT 03</span>
+        <span class="project-season">Summer 2025</span>
+      </div>
+
+      <h3>Power Outage Notification Bot</h3>
+
+      <p class="project-description">
+        Designed and deployed a Telegram bot used by
+        local residents during nationwide power shortages
+        in Qom, Iran.
+      </p>
+
+      <p class="project-description">
+        The bot provides scheduled outage times, helping
+        residents plan their daily tasks and reduce
+        disruptions caused by unexpected power cuts.
+      </p>
+
+      <div class="project-tech">
+        <span>Python</span>
+        <span>Telegram Bot</span>
+        <span>Automation</span>
+      </div>
+
+      <div class="project-links">
+        <a
+          href="https://github.com/GolsaCodes/PowerCut-Notifier-Bo"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="github-link"
+        >
+          View on GitHub <span>↗</span>
+        </a>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
     <!-- Presentations -->
 
     <section id="presentations">
@@ -186,6 +366,27 @@
               <span>Working Principles</span>
               <span>Limitations</span>
             </div>
+            
+<div class="presentation-video">
+
+  <div class="video-label">
+    <span class="video-indicator"></span>
+    Presentation Video
+  </div>
+
+  <div class="video-wrapper">
+    <iframe
+      src="YOUR_VIDEO_EMBED_URL"
+      title="Quick Review of RNN and LSTM"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+</div>
+
           </div>
         </article>
 
