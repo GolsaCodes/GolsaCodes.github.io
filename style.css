@@ -116,7 +116,7 @@ header.site-header {
 .decoration-3 {
     top: 280px;
     left: 19%;
-    width: clamp(65px, 7vw, 100px);
+    width: clamp(75px, 9vw, 120px);
     animation-delay: -4s;
 }
 
