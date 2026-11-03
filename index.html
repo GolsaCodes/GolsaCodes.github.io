@@ -201,13 +201,44 @@
 
     <!-- Project 1 -->
 
+      <article class="project-card">
+
+      <div class="project-top">
+        <span class="project-season">Summer 2026</span>
+      </div>
+
+      <h3>Selective Query Expansion</h3>
+
+      <p class="project-description">
+       This project investigates whether Machine Learning models can predict when an LLM-expanded query will perform better than its original version in sparse information retrieval.
+        Instead of always using the original or expanded query, the objective is to train a classifier that selects the query version expected to achieve better retrieval performance.
+        Using six query-level features and NDCG@10-based labels, three classifiers are evaluated: Random Forest, XGBoost, and Logistic Regression.
+      </p>
+
+      <p class="project-description">
+        The findings suggest that predicting the effectiveness of query expansion remains challenging with the current feature set. Further work is needed to develop more informative features, 
+        improve the evaluation setup, data, and investigate decision mechanisms that can operate before retrieval.
+      </p>
+
+  <div class="project-links">
+        <a
+          href="https://github.com/GolsaCodes/selective-query-expansion"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="github-link"
+        >
+          View on GitHub <span>↗</span>
+        </a>
+      </div>
+    </article>
+    <!-- Project 2 -->
     <article class="project-card">
 
       <div class="project-top">
         <span class="project-season">Summer 2026</span>
       </div>
 
-      <h3>Information Retrieval System</h3>
+      <h3>An Empirical Study of LLM-Based Query Expansion in Dense and Sparse Retrieval</h3>
 
       <p class="project-description">
         Developed an LLM-based query expansion pipeline
@@ -233,7 +264,16 @@
         <span>BM25</span>
         <span>BEIR</span>
       </div>
-
+  <div class="project-links">
+        <a
+          href="https://github.com/GolsaCodes/llm-query-expansion-retrieval"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="github-link"
+        >
+          View on GitHub <span>↗</span>
+        </a>
+      </div>
     </article>
 
 
