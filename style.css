@@ -502,6 +502,26 @@ footer {
   top: 0.25rem;
 }
 
+.presentation-image {
+  width: 100%;
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.presentation-image img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease;
+}
+
+.presentation-image img:hover {
+  transform: scale(1.02);
+}
 
 /* =========================================
    PRESENTATIONS SECTION
