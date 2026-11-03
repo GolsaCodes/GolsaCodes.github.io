@@ -15,24 +15,21 @@
   --font-sans: 'Plus Jakarta Sans', serif;
   --font-serif: 'Playfair Display', serif;
 }
-.presentation-card a {
-  color: #8ecbff;
-  text-decoration: none;
+
+.presentation-card h3 a,
+.presentation-card p a {
+  color: #9bcaff !important;
+  text-decoration: underline;
+  text-decoration-color: #9bcaff;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
   transition: color 0.3s ease;
 }
 
-.presentation-card a:hover {
-  color: #b8ddff;
-}
-
-.project-card a {
-  color: #8ecbff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.project-card a:hover {
-  color: #b8ddff;
+.presentation-card h3 a:hover,
+.presentation-card p a:hover {
+  color: #b8ddff !important;
+  text-decoration-color: #b8ddff;
 }
 
 
