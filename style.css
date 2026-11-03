@@ -676,7 +676,7 @@ footer {
 ========================================= */
 
 .main-nav {
-  position: sticky;
+  position: center;
   top: 12px;
   z-index: 1000;
   width: min(100% - 4rem, 1220px);
