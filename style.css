@@ -15,15 +15,26 @@
   --font-sans: 'Plus Jakarta Sans', serif;
   --font-serif: 'Playfair Display', serif;
 }
-.presentation-card h3 a {
+.presentation-card a {
   color: #8ecbff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.presentation-card h3 a:hover {
+.presentation-card a:hover {
   color: #b8ddff;
 }
+
+.project-card a {
+  color: #8ecbff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+  color: #b8ddff;
+}
+
 
 * {
   margin: 0;
