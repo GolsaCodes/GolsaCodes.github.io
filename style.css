@@ -1002,40 +1002,29 @@ footer {
 /* =========================================
    PRESENTATION VIDEO
 ========================================= */
-
-.presentation-video {
-  margin-top: 1.5rem;
-}
-
-.video-label {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: var(--muted);
-  font-size: 0.76rem;
-  font-weight: 600;
-  margin-bottom: 0.8rem;
-}
-
-.video-indicator {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--rose);
-  box-shadow: 0 0 10px rgba(255, 123, 114, 0.5);
-}
-
 .video-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 14px;
   border: 1px solid var(--border);
   background: #05080c;
 }
 
-.video-wrapper iframe {
+/* GIF - Automatic dimensions */
+.gif-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Google Drive Video - Responsive 16:9 */
+.drive-wrapper {
+  aspect-ratio: 16 / 9;
+}
+
+.drive-wrapper iframe {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1043,6 +1032,12 @@ footer {
   border: 0;
 }
 
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .video-wrapper {
+    border-radius: 10px;
+  }
+}
 
 /* =========================================
    NAVIGATION SCROLL OFFSET
