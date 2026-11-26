@@ -1403,42 +1403,77 @@ main.container > section {
   }
 }
 /* =========================================
-   BEYOND CS - POSITION AND WIDTH
+   PROJECTS + RIGHT COLUMN LAYOUT
 ========================================= */
 
-/* Desktop: directly below News, same right column */
-#beyond-cs {
-  grid-column: 8 / -1 !important;
-  width: 100%;
-  min-width: 0;
-  justify-self: stretch;
+main.container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: start;
 }
 
-/* Make the card fill the entire section width */
-#beyond-cs .presentation-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  width: 100%;
+/* Left column */
+#projects {
+    grid-column: span 7;
+    min-width: 0;
 }
 
-#beyond-cs .presentation-card {
-  width: 100%;
-  max-width: none;
-  min-width: 0;
-  box-sizing: border-box;
-}
-
-/* Tablet: News occupies columns 7–12 */
-@media (min-width: 721px) and (max-width: 1000px) {
-  #beyond-cs {
-    grid-column: 7 / -1 !important;
-  }
-}
-
-/* Mobile: sections stack vertically */
-@media (max-width: 720px) {
-  #beyond-cs {
-    grid-column: 1 / -1 !important;
+/* Right column contains News and Beyond CS */
+.right-column {
+    grid-column: span 5;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     width: 100%;
-  }
+}
+
+/* Both sections fill the right column */
+.right-column > section {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+
+/* Cards fill their available width */
+#presentations .presentation-grid,
+#beyond-cs .presentation-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+}
+
+#presentations .presentation-card,
+#beyond-cs .presentation-card {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 1000px) and (min-width: 721px) {
+    #projects {
+        grid-column: span 6;
+    }
+
+    .right-column {
+        grid-column: span 6;
+    }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+    main.container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right-column {
+        width: 100%;
+    }
+
+    .right-column > section {
+        width: 100%;
+    }
 }
