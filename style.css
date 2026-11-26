@@ -269,7 +269,7 @@ section:hover::before {
 
 h2 {
   font-family: var(--font-serif);
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   color: var(--text-bright);
   margin-bottom: 2.2rem;
   position: relative;
