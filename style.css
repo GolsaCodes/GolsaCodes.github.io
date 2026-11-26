@@ -1228,86 +1228,70 @@ section[id] {
   }
 }
 
+
 /* =========================================
-   FLEXIBLE MULTI-COLUMN PAGE LAYOUT
-   Projects and News/Presentations sit side by side on desktop.
+   MAIN PAGE LAYOUT
 ========================================= */
+
 main.container {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  align-items: start;
-  column-gap: 1.5rem;
-  row-gap: 1.5rem;
-  padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: start;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    padding-bottom: 5rem;
 }
 
-main.container > section {
-  min-width: 0;
-  width: 100%;
-  margin: 0;
-}
-
+/* Full-width sections */
 #about,
 #teaching,
 #contact {
-  grid-column: 1 / -1;
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
 }
 
+/* Projects: left column */
 #projects {
-  grid-column: span 7;
-}
-
-#presentations {
-  grid-column: span 5;
-}
-
-#projects .projects-grid,
-#presentations .presentation-grid {
-  grid-template-columns: minmax(0, 1fr);
-}
-
-#projects .project-card,
-#presentations .presentation-card {
-  min-width: 0;
-}
-
-#presentations .presentation-card {
-  padding: 1.35rem;
-}
-
-#presentations .presentation-content h3 {
-  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
-}
-
-#presentations .video-wrapper {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 14px;
-}
-
-#presentations .video-wrapper iframe {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-@media (max-width: 1000px) {
-  main.container {
-    column-gap: 1rem;
-    row-gap: 1rem;
-  }
-
-  #projects,
-  #presentations {
     grid-column: span 6;
-  }
-
-  section {
-    padding: clamp(1.4rem, 3vw, 2rem);
-  }
+    width: 100%;
+    min-width: 0;
 }
+
+/* News + Beyond CS: right column */
+.right-column {
+    grid-column: span 6;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Make cards fill their sections */
+#presentations .presentation-card,
+#beyond-cs .presentation-card {
+    width: 100%;
+    min-width: 0;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+    main.container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #about,
+    #teaching,
+    #projects,
+    .right-column,
+    #contact {
+        width: 100%;
+    }
+}
+
 
 /* =========================================
    HERO DECORATIONS - MOBILE RESPONSIVE
@@ -1401,79 +1385,4 @@ main.container > section {
     flex-wrap: wrap;
     gap: 0.55rem 1rem;
   }
-}
-/* =========================================
-   PROJECTS + RIGHT COLUMN LAYOUT
-========================================= */
-
-main.container {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    align-items: start;
-}
-
-/* Left column */
-#projects {
-    grid-column: span 7;
-    min-width: 0;
-}
-
-/* Right column contains News and Beyond CS */
-.right-column {
-    grid-column: span 5;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 100%;
-}
-
-/* Both sections fill the right column */
-.right-column > section {
-    width: 100%;
-    min-width: 0;
-    margin: 0;
-}
-
-/* Cards fill their available width */
-#presentations .presentation-grid,
-#beyond-cs .presentation-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    width: 100%;
-}
-
-#presentations .presentation-card,
-#beyond-cs .presentation-card {
-    width: 100%;
-    max-width: none;
-    min-width: 0;
-    box-sizing: border-box;
-}
-
-/* Tablet */
-@media (max-width: 1000px) and (min-width: 721px) {
-    #projects {
-        grid-column: span 6;
-    }
-
-    .right-column {
-        grid-column: span 6;
-    }
-}
-
-/* Mobile */
-@media (max-width: 720px) {
-    main.container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .right-column {
-        width: 100%;
-    }
-
-    .right-column > section {
-        width: 100%;
-    }
 }
