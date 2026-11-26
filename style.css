@@ -1402,12 +1402,11 @@ main.container > section {
     gap: 0.55rem 1rem;
   }
 }
-/* =========================================
-   BEYOND CS SECTION
-========================================= */
-
+/* Beyond CS directly below News */
 #beyond-cs {
-  grid-column: 1 / -1;
+  grid-column: 8 / -1;
+  grid-row: auto;
+  width: 100%;
 }
 
 #beyond-cs .presentation-grid {
@@ -1415,6 +1414,7 @@ main.container > section {
 }
 
 #beyond-cs .presentation-card {
+  width: 100%;
+  padding: 1.35rem;
   min-width: 0;
-  padding: 1.8rem;
 }
