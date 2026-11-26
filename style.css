@@ -1402,3 +1402,19 @@ main.container > section {
     gap: 0.55rem 1rem;
   }
 }
+/* =========================================
+   BEYOND CS SECTION
+========================================= */
+
+#beyond-cs {
+  grid-column: 1 / -1;
+}
+
+#beyond-cs .presentation-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+#beyond-cs .presentation-card {
+  min-width: 0;
+  padding: 1.8rem;
+}
