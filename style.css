@@ -1402,19 +1402,43 @@ main.container > section {
     gap: 0.55rem 1rem;
   }
 }
-/* Beyond CS directly below News */
+/* =========================================
+   BEYOND CS - POSITION AND WIDTH
+========================================= */
+
+/* Desktop: directly below News, same right column */
 #beyond-cs {
-  grid-column: 8 / -1;
-  grid-row: auto;
+  grid-column: 8 / -1 !important;
   width: 100%;
+  min-width: 0;
+  justify-self: stretch;
 }
 
+/* Make the card fill the entire section width */
 #beyond-cs .presentation-grid {
+  display: grid;
   grid-template-columns: minmax(0, 1fr);
+  width: 100%;
 }
 
 #beyond-cs .presentation-card {
   width: 100%;
-  padding: 1.35rem;
+  max-width: none;
   min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Tablet: News occupies columns 7–12 */
+@media (min-width: 721px) and (max-width: 1000px) {
+  #beyond-cs {
+    grid-column: 7 / -1 !important;
+  }
+}
+
+/* Mobile: sections stack vertically */
+@media (max-width: 720px) {
+  #beyond-cs {
+    grid-column: 1 / -1 !important;
+    width: 100%;
+  }
 }
